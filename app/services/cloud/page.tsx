@@ -20,28 +20,28 @@ export default function CloudSolutions() {
                 <h2 className="font-bold mb-4">Our Cloud Services:</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <FadeInView>
-                        <GlassmorphicContainer>
+                        <GlassmorphicContainer className="p-6">
                             <FaCloud className="text-3xl text-accent dark:text-lime-500 mb-2" />
                             <h3 className="font-semibold mb-2">Cloud Migration</h3>
                             <p>We help businesses seamlessly transition their existing infrastructure and applications to the cloud, minimizing downtime and ensuring data integrity.</p>
                         </GlassmorphicContainer>
                     </FadeInView>
                     <FadeInView>
-                        <GlassmorphicContainer>
+                        <GlassmorphicContainer className="p-6">
                             <FaServer className="text-3xl text-accent dark:text-lime-500 mb-2" />
                             <h3 className="font-semibold mb-2">Cloud Infrastructure Management</h3>
                             <p>Our team designs, implements, and manages robust cloud infrastructures tailored to your specific business needs.</p>
                         </GlassmorphicContainer>
                     </FadeInView>
                     <FadeInView>
-                        <GlassmorphicContainer>
+                        <GlassmorphicContainer className="p-6">
                             <FaLock className="text-3xl text-accent dark:text-lime-500 mb-2" />
                             <h3 className="font-semibold mb-2">Cloud Security</h3>
                             <p>We implement industry-leading security measures to protect your data and applications in the cloud.</p>
                         </GlassmorphicContainer>
                     </FadeInView>
                     <FadeInView>
-                        <GlassmorphicContainer>
+                        <GlassmorphicContainer className="p-6">
                             <FaChartLine className="text-3xl text-accent dark:text-lime-500 mb-2" />
                             <h3 className="font-semibold mb-2">Cloud Optimization</h3>
                             <p>We continuously monitor and optimize your cloud resources to ensure maximum performance and cost-efficiency.</p>
