@@ -6,6 +6,7 @@ import { FadeInView } from "@/components/FadeInView"
 import { GlassmorphicContainer } from "@/components/GlassmorphicContainer"
 import { SlideInView } from "@/components/SlideInView"
 import { FaCloud, FaServer, FaLock, FaChartLine } from "react-icons/fa"
+import Link from "next/link"
 
 export default function CloudSolutions() {
     return (
@@ -60,7 +61,16 @@ export default function CloudSolutions() {
                     </SlideInView>
                 </FadeInView>
                 &nbsp;
-                <BackButton />
+                <FadeInView>
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <Link href="/contact?service=Cloud Solutions">
+                            <button className="mb-4 flex items-center shadow-md font-semibold hover:bg-white hover:text-red-600 dark:bg-white dark:text-red-600 dark:hover:bg-lime-500 dark:hover:text-white px-4 py-1 rounded-md transition-all duration-500">
+                                Start Now
+                            </button>
+                        </Link>
+                    </div>
+                </FadeInView>
             </div>
         </section>
     )

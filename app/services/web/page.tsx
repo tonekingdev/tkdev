@@ -4,6 +4,7 @@ import { DropInView } from '@/components/DropInView'
 import { SlideInView } from '@/components/SlideInView'
 import { FadeInView } from '@/components/FadeInView'
 import { GlassmorphicContainer } from '@/components/GlassmorphicContainer'
+import Link from 'next/link'
 
 export default function WebDevelopment() {
     return (
@@ -64,7 +65,16 @@ export default function WebDevelopment() {
                     <p>Whether you need a simple landing page or a complex web application, our team has the skills and experience to bring your vision to life. Contact us today to start your web development journey!</p>
                 </SlideInView>
                 &nbsp;
-                <BackButton />
+                <FadeInView>
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <Link href="/contact?service=Web Development">
+                            <button className="mb-4 flex items-center shadow-md font-semibold hover:bg-white hover:text-red-600 dark:bg-white dark:text-red-600 dark:hover:bg-lime-500 dark:hover:text-white px-4 py-1 rounded-md transition-all duration-500">
+                                Start Now
+                            </button>
+                        </Link>
+                    </div>
+                </FadeInView>
             </div>
         </section>
     )

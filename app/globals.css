@@ -17,6 +17,12 @@
       @apply font-secondary font-bold p-0 m-0;
     }
     h1 {
-      @apply text-[48px] xl:text-[80px] leading-[1.2] font-semibold; 
+      @apply text-[30px] md:text-[36px] xl:text-[42px] leading-[1.2] font-semibold; 
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 font-bold rounded-lg shadow-lg transition-all duration-500 ease-in-out bg-white text-accent dark:bg-accent-hover dark:text-white
   }
 }

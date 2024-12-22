@@ -4,6 +4,7 @@ import { FadeInView } from "@/components/FadeInView";
 import { GlassmorphicContainer } from "@/components/GlassmorphicContainer";
 import { SlideInView } from "@/components/SlideInView";
 import { FaShieldAlt, FaUserSecret, FaLock, FaCode } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Cybersecurity() {
     return (
@@ -64,7 +65,16 @@ export default function Cybersecurity() {
                     <p>In an era where cyber threats are constantly evolving, protecting your digital assets is more important than ever. Our cybersecurity experts are committed to safeguarding your business against potential threats and ensuring the confidentiality, integrity, and availability of your data. Contact us today to learn how we can enhance your cybersecurity posture.</p>
                 </SlideInView>
                 &nbsp;
-                <BackButton />
+                <FadeInView>
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <Link href="/contact?service=Cybersecurity">
+                            <button className="mb-4 flex items-center shadow-md font-semibold hover:bg-white hover:text-red-600 dark:bg-white dark:text-red-600 dark:hover:bg-lime-500 dark:hover:text-white px-4 py-1 rounded-md transition-all duration-500">
+                                Start Now
+                            </button>
+                        </Link>
+                    </div>
+                </FadeInView>
             </div>
         </section>
     )

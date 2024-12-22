@@ -6,6 +6,7 @@ import { FadeInView } from "@/components/FadeInView"
 import { GlassmorphicContainer } from "@/components/GlassmorphicContainer"
 import { SlideInView } from "@/components/SlideInView"
 import { FaDatabase, FaSearch, FaShieldAlt, FaSyncAlt } from "react-icons/fa"
+import Link from "next/link"
 
 export default function DatabaseManagement() {
     return (
@@ -63,7 +64,16 @@ export default function DatabaseManagement() {
                     </SlideInView>
                 </FadeInView>
                 &nbsp;
-                <BackButton />
+                <FadeInView>
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <Link href="/contact?service=Database Management">
+                            <button className="mb-4 flex items-center shadow-md font-semibold hover:bg-white hover:text-red-600 dark:bg-white dark:text-red-600 dark:hover:bg-lime-500 dark:hover:text-white px-4 py-1 rounded-md transition-all duration-500">
+                                Start Now
+                            </button>
+                        </Link>
+                    </div>
+                </FadeInView>
             </div>
         </section>
     )

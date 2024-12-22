@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { HiHome, HiCircleStack, HiViewColumns, HiEnvelope, HiCommandLine } from "react-icons/hi2"
 
-const links = [
+export const links = [
     {
         name: "home",
         path: "/",

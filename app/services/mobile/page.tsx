@@ -2,6 +2,7 @@ import BackButton from "@/components/BackButton";
 import { DropInView } from "@/components/DropInView";
 import { FadeInView } from "@/components/FadeInView";
 import { SlideInView } from "@/components/SlideInView";
+import Link from "next/link";
 
 export default function MobileAppDevelopment() {
     return (
@@ -30,7 +31,16 @@ export default function MobileAppDevelopment() {
                     <p>Whether you need a simple MVP or a complex enterprise application, we have the skills and experience to bring your vision to life.</p>
                 </SlideInView>
                 &nbsp;
-                <BackButton />
+                <FadeInView>
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <Link href="/contact?service=Mobile App Development">
+                            <button className="mb-4 flex items-center shadow-md font-semibold hover:bg-white hover:text-red-600 dark:bg-white dark:text-red-600 dark:hover:bg-lime-500 dark:hover:text-white px-4 py-1 rounded-md transition-all duration-500">
+                                Start Now
+                            </button>
+                        </Link>
+                    </div>
+                </FadeInView>
             </div>
         </section>
     )

@@ -4,6 +4,7 @@ import { DropInView } from "@/components/DropInView";
 import { SlideInView } from "@/components/SlideInView";
 import { FadeInView } from "@/components/FadeInView";
 import { GlassmorphicContainer } from "@/components/GlassmorphicContainer";
+import Link from "next/link";
 
 export default function WebsiteRedesign() {
     return (
@@ -65,7 +66,16 @@ export default function WebsiteRedesign() {
                     <p>Whether you need a complete overhaul or a strategic refresh, our team has the skills and experience to transform your website into a powerful business tool. Contact us today to start your website redesign journey and take your online presence to the next level!</p>
                 </SlideInView>
                 &nbsp;
-                <BackButton />
+                <FadeInView>
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <Link href="/contact?service=Website Redesign">
+                            <button className="mb-4 flex items-center shadow-md font-semibold hover:bg-white hover:text-red-600 dark:bg-white dark:text-red-600 dark:hover:bg-lime-500 dark:hover:text-white px-4 py-1 rounded-md transition-all duration-500">
+                                Start Now
+                            </button>
+                        </Link>
+                    </div>
+                </FadeInView>
             </div>
         </section>
     )
