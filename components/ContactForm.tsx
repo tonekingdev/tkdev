@@ -54,7 +54,7 @@ export default function ContactForm() {
         defaultValues: {
             name: "",
             email: "",
-            subject: searchParams?.get('service') as z.infer<typeof formSchema>['subject'] || "General Inquiry",
+            subject: (searchParams?.get('service') as z.infer<typeof formSchema>['subject']) || "General Inquiry",
             message: "",
         },
     })

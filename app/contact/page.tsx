@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { Metadata } from "next"
 import { FaEnvelope } from "react-icons/fa"
 import ContactForm from "@/components/ContactForm"
@@ -34,7 +35,9 @@ export default function Contact() {
                     </div>
                     <div className="md:w-1/2">
                         <FadeInView>
-                            <ContactForm />
+                            <Suspense fallback={<div>Loading form...</div>}>
+                                <ContactForm />
+                            </Suspense>
                         </FadeInView>
                     </div>
                 </div>
