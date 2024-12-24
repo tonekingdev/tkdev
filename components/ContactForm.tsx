@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { useState } from "react"
@@ -72,18 +71,21 @@ export default function ContactForm() {
             })
 
             if (!response.ok) {
-                throw new Error('Failed to submit form')
+                throw new Error('Failed to submit form: ${response.status} ${response.statusText}')
             }
+
+            const data = await response.json()
 
             toast({
                 title: "Success!",
-                description: "Your message has been sent. We'll get back to you soon.",
+                description: data.message || "Your message has been sent. We'll get back to you soon.",
             })
             form.reset()
         } catch (error) {
+            console.error('Form submission error:', error)
             toast({
                 title: "Error",
-                description: "There was a problem submitting the form. Please try again.",
+                description: error instanceof Error ? error.message : "There was a problem submitting the form. Please try again.",
                 variant: "destructive",
             })
         } finally {
