@@ -57,7 +57,7 @@ export function MobileMenu() {
             <nav className="flex flex-col justify-center gap-8 text-white">
                 {links.map((link, index) => {
                     return (
-                        <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent font-bold dark:text-white"}text-xl hover:font-semibold capitalize hover:text-accent-hover transition-all duration-500`}>
+                        <Link href={link.path} key={index} className={`${link.path === pathname && "text-accent font-bold dark:text-white"}text-xl text-black hover:font-semibold capitalize hover:text-accent-hover transition-all duration-500`}>
                             <div className="flex flex-row gap-x-2 items-center">
                                 {link.icon}
                                 {link.name}

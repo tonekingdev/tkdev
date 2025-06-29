@@ -27,7 +27,7 @@ export default function Header() {
                 </Link>
                 <div className="flex items-center gap-2 xl:mr-16">
                     <Link href="/contact">
-                        <Button variant='destructive' className="hidden md:block shadow-md font-semibold hover:text-red-600 hover:bg-white hover:border-red-600 dark:bg-primary dark:text-red-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500">Get Started</Button>
+                        <Button variant='destructive' className="hidden md:block shadow-md font-semibold hover:text-red-600 hover:bg-white hover:border-red-600 dark:bg-white dark:text-red-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500">Get Started</Button>
                     </Link>
                     <DarkModeToggle />
                     {/* mobile menu */}

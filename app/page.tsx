@@ -2,29 +2,20 @@ import { FadeInView } from "@/components/FadeInView";
 import Link from "next/link";
 import { Features } from "@/components/Features";
 import { HomeImage } from "@/components/HomeImage";
-import { JsonLd } from "@/components/JsonLd";
 import { SlideInView } from "@/components/SlideInView";
 import { Button } from "@/components/ui/button";
 import { GlassmorphicContainer } from "@/components/GlassmorphicContainer";
 import { FaRocket, FaFileCode, FaUsers, FaLightbulb } from "react-icons/fa";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Tone King Development | Home',
+  description: 'Tone King Development brings your digital dreams to life with cutting-edge technology and innovative solutions for both startups and established SMBs.'
+}
 
 export default function Home() {
   return (
     <>
-      <JsonLd 
-        data={{
-          "@context": "https://scheme.org",
-          "@type": "WebSite",
-          "name": "Tone King Development",
-          "url": "https://www.tonekingdev.com",
-          "description": "Software development for start-up companies with instant quotes and SMB discounts",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.tonekingdev.com/search?q={search_term_string)",
-            "query-input": "required name=search_term_string"
-          }
-        }} 
-      />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row items-center xl:justify-between py-8 xl:pb-24">
           <div className="order-2 xl:order-none mt-8 xl:mt-0">
@@ -39,7 +30,7 @@ export default function Home() {
             </FadeInView>
             <SlideInView>
               <Link href="/contact">
-                <Button variant='outline' className="shadow-md font-semibold hover:text-red-600 hover:bg-white hover:border-red-500 dark:hover:border-lime-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500">
+                <Button variant='outline' className="shadow-md font-semibold hover:text-red-600 hover:bg-white hover:border-red-500 dark:bg-red-500 dark:hover:border-lime-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500">
                 Start Now
               </Button>
               </Link>
@@ -92,7 +83,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">Ready to bring your idea to life?</h2>
             <p className="text-xl mb-8">Get started with a free consultation today!</p>
             <div className="flex justify-center space-x-4">
-              <Button variant='destructive' size="lg" className="shadow-md font-semibold hover:text-red-500 hover:bg-white hover:border-red-500 dark:bg-primary dark:text-red-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500 ease-in-out">
+              <Button variant='destructive' size="lg" className="shadow-md font-semibold hover:text-red-500 hover:bg-white hover:border-red-500 dark:bg-white dark:text-red-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500 ease-in-out">
                 <Link href="/contact">Get Started</Link>
               </Button>
             </div>

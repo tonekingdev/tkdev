@@ -133,7 +133,7 @@ export default function ContactForm() {
                     variant='destructive' 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="shadow-md dark:bg-primary hover:bg-white hover:border-red-600 hover:text-accent dark:text-red-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500"
+                    className="shadow-md dark:bg-white hover:bg-white hover:border-red-600 hover:text-accent dark:text-red-500 dark:hover:bg-lime-500 dark:hover:text-white transition-all duration-500"
                 >
                     {isSubmitting ? (
                         <>

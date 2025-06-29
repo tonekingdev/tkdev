@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import dynamic from "next/dynamic";
 import BackToTop from "@/components/BackToTop";
+import JsonLd from "@/components/JsonLd";
 
 const Header = dynamic(() => import('@/components/Header'), { ssr: true })
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: true })
@@ -20,6 +21,29 @@ const poppins = Poppins({
   variable: '--font-poppins',
   display: 'swap',
 })
+
+export const metadata = {
+  title: 'Tone King Development',
+  description: 'Expert web and mobile app development services for startups and SMBs.',
+  authors: [{ name: 'Tone King Development'}],
+  metadataBase: new URL('https://tonekingdev.com'),
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/img/android-chrome-512x512.png',
+    shortcut: '/img/android-chrome-192x192.png',
+    apple: '/img/apple-touch-icon.png',
+  },
+  social: {
+    facebook: 'Tone King Development',
+    instagram: '@tonekingdevelopment',
+  },
+}
 
 export default function RootLayout({
   children,
@@ -39,6 +63,7 @@ export default function RootLayout({
           </div>
         </Providers>
         <BackToTop />
+        <JsonLd />
       </body>
     </html>
   );

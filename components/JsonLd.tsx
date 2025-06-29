@@ -1,16 +1,27 @@
-import { Fragment } from 'react'
+import { Organization, WithContext } from 'schema-dts'
 
-interface JsonLdProps {
-  data: Record<string, unknown>
-}
+export default function JsonLd() {
+  const orgSchema: WithContext<Organization> = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Tone King Development',
+    url: 'https://tonekingdev.com',
+    logo: 'https://tonekingdev.com/img/tonekingdevLogo.png',
+    sameAs: [
+      'https://www.facebook.com/profile.php?id=61560943522036',
+      'https://www.instagram.com/tonekingdevelopment/',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'info@tonekingdev.com',
+    },
+  }
 
-export function JsonLd({ data }: JsonLdProps) {
   return (
-    <Fragment>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      />
-    </Fragment>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+    />
   )
 }
